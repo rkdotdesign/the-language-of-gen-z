@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fun, data-driven dive into Gen Z's most-used slangs and emojis!">
+  <title>The Language of Gen Z</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>The Language of Gen Z</h1>
+    <p class="description">A fun, data-driven dive into Gen Z's most-used slangs and emojis!</p>
+    <div class="tabs">
+      <button class="tab active" data-type="slang">Slangs</button>
+      <button class="tab" data-type="emoji">Emojis</button>
+    </div>
+    <div class="mobile-notice">Best experienced on desktop devices</div>
+    <div id="tooltip" class="tooltip">
+      <div id="tooltip-title" class="tooltip-title"></div>
+      <div id="tooltip-body" class="tooltip-body"></div>
+    </div>
+    <div class="cloud-wrapper">
+      <svg id="word-cloud"></svg>
+    </div>
+    <footer class="footer">
+      <p>Data Sources: <a href="https://github.com/kaspercools/genz-dataset" target="_blank">Kaspercools GenZ Dataset</a> | Visualization built using D3.js.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
